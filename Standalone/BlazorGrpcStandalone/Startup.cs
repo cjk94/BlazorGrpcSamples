@@ -20,7 +20,7 @@ namespace BlazorGrpcStandalone
                 //potentially needed to call insecure grpc services with .net core 
                 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
-                var channel = GrpcChannel.ForAddress("https://radiology-devcon.bayer.com:5001", new GrpcChannelOptions { HttpClient = httpClient });
+                var channel = GrpcChannel.ForAddress("https://radiology-devcon.bayer.com", new GrpcChannelOptions { HttpClient = httpClient });
 
                 // Now we can instantiate gRPC clients for this channel
                 return new WeatherForecasts.WeatherForecastsClient(channel);

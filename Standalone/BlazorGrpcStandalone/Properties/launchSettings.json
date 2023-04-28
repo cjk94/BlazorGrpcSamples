@@ -21,7 +21,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://radiology-devcon.bayer.com:5001;https://radiology-devcon.bayer.com:5000"
+      "applicationUrl": "https://radiology-devcon.bayer.com"
     }
   }
 }
