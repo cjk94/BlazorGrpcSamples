@@ -34,7 +34,7 @@ namespace SampleBackendGrpcServer
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<WeatherForecastsService>().EnableGrpcWeb()
-                    .RequireCors(cors => cors.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
+                    .RequireCors(cors => cors.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(origin => true).AllowCredentials());
 
                 endpoints.MapGet("/", async context =>
                 {
