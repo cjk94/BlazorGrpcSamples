@@ -33,7 +33,7 @@ namespace SampleBackendGrpcServer
             {
                 endpoints.MapGrpcService<WeatherForecastsService>().EnableGrpcWeb()
                     .RequireCors(cors => cors.AllowAnyHeader().AllowAnyMethod()
-                        .WithOrigins("http://localhost:54070", "https://localhost:44316"));
+                        .WithOrigins("https://radiology-devcon.bayer.com", "http://localhost:54070", "https://localhost:44316"));
 
                 endpoints.MapGet("/", async context =>
                 {
