@@ -3,7 +3,7 @@
     "SampleBackendGrpcServer": {
       "commandName": "Project",
       "launchBrowser": false,
-      "applicationUrl": "https://localhost:5001",
+      "applicationUrl": "https://radiology-devcon.bayer.com",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -16,7 +16,7 @@ namespace BlazorGrpcStandalone
                 // Create a gRPC-Web channel pointing to the backend server
                 var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler()));
 
-                var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions { HttpClient = httpClient });
+                var channel = GrpcChannel.ForAddress("https://radiology-devcon.bayer.com", new GrpcChannelOptions { HttpClient = httpClient });
 
                 // Now we can instantiate gRPC clients for this channel
                 return new WeatherForecasts.WeatherForecastsClient(channel);
