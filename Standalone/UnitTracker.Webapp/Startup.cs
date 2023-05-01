@@ -21,7 +21,7 @@ namespace UnitTracker.Webapp
                 //potentially needed to call insecure grpc services with .net core 
                 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
-                var channel = GrpcChannel.ForAddress("http://localhost:5001/", new GrpcChannelOptions { HttpClient = httpClient });
+                var channel = GrpcChannel.ForAddress("https://radiology-devcon.bayer.com/", new GrpcChannelOptions { HttpClient = httpClient });
                 return new UnitTrackerService.UnitTrackerServiceClient(channel);
                 //return new WeatherForecasts.WeatherForecastsClient(channel);
             });
