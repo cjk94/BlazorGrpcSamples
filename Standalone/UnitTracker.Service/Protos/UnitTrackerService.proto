@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "BlazorGrpc2";
+
+package UnitTrackerService;
+
+service UnitTrackerService{
+  rpc GetCheckInCode (google.protobuf.Empty) returns (CheckInCodeReply);
+}
+
+message CheckInCodeReply {
+ string checkInCode = 1;
+}
+

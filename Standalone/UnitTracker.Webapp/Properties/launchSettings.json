@@ -15,13 +15,13 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "BlazorGrpcStandalone": {
+    "UnitTracker.Webapp": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://radiology-devcon.bayer.com"
+      "applicationUrl": "http://localhost:5001/"
     }
   }
 }

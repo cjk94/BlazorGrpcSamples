@@ -5,7 +5,7 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using BlazorGrpc;
 
-namespace SampleBackendGrpcServer.Services
+namespace UnitTracker.Service.Services
 {
     public class WeatherForecastsService : WeatherForecasts.WeatherForecastsBase
     {

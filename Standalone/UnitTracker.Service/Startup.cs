@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SampleBackendGrpcServer.Services;
+using UnitTracker.Service.Services;
 
-namespace SampleBackendGrpcServer
+namespace UnitTracker.Service
 {
     public class Startup
     {
@@ -34,6 +34,9 @@ namespace SampleBackendGrpcServer
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<WeatherForecastsService>().EnableGrpcWeb()
+                    .RequireCors(cors => cors.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(origin => true).AllowCredentials());
+
+                endpoints.MapGrpcService<UnitTrackerServiceImplementation>().EnableGrpcWeb()
                     .RequireCors(cors => cors.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(origin => true).AllowCredentials());
 
                 endpoints.MapGet("/", async context =>

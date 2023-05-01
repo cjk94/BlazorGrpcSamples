@@ -1,9 +1,9 @@
 ﻿{
   "profiles": {
-    "SampleBackendGrpcServer": {
+    "UnitTracker.Service": {
       "commandName": "Project",
       "launchBrowser": false,
-      "applicationUrl": "https://radiology-devcon.bayer.com",
+      "applicationUrl": "http://localhost:5001/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

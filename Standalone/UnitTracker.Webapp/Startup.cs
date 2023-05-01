@@ -1,12 +1,13 @@
 using System;
 using BlazorGrpc;
+using BlazorGrpc2;
 using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http;
 
-namespace BlazorGrpcStandalone
+namespace UnitTracker.Webapp
 {
     public class Startup
     {
@@ -20,10 +21,9 @@ namespace BlazorGrpcStandalone
                 //potentially needed to call insecure grpc services with .net core 
                 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
-                var channel = GrpcChannel.ForAddress("https://radiology-devcon.bayer.com", new GrpcChannelOptions { HttpClient = httpClient });
-
-                // Now we can instantiate gRPC clients for this channel
-                return new WeatherForecasts.WeatherForecastsClient(channel);
+                var channel = GrpcChannel.ForAddress("http://localhost:5001/", new GrpcChannelOptions { HttpClient = httpClient });
+                return new UnitTrackerService.UnitTrackerServiceClient(channel);
+                //return new WeatherForecasts.WeatherForecastsClient(channel);
             });
         }
 

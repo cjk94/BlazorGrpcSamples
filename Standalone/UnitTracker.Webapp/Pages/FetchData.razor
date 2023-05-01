@@ -1,0 +1,27 @@
+﻿@page "/Checkin"
+@using BlazorGrpc2
+@inject UnitTrackerService.UnitTrackerServiceClient unitTrackerServiceClient
+
+<h1>Checkin</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (checkInCode == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p><em>@checkInCode</em></p>
+}
+
+@code {
+    private string checkInCode;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        checkInCode = (await unitTrackerServiceClient.GetCheckInCodeAsync(new Empty())).CheckInCode;
+
+    }
+}

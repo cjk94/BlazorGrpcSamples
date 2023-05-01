@@ -26,7 +26,8 @@
 
   <ItemGroup>
     <!-- Share .proto file with backend server to ensure consistency. Alternatively you could copy it into this project. -->
-    <Protobuf Include="..\SampleBackendGrpcServer\Protos\weather.proto" />
+    <Protobuf Include="..\UnitTracker.Service\Protos\weather.proto" />
+    <Protobuf Include="..\UnitTracker.Service\Protos\UnitTrackerService.proto" />
   </ItemGroup>
 
 </Project>

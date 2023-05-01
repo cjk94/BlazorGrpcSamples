@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Blazor.Hosting;
 
-namespace BlazorGrpcStandalone
+namespace UnitTracker.Webapp
 {
     public class Program
     {
