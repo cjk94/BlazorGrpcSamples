@@ -5,6 +5,7 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using BlazorGrpc;
 using BlazorGrpc2;
+using Stellinity2.UnitTracker.Shared;
 
 namespace UnitTracker.Service.Services
 {

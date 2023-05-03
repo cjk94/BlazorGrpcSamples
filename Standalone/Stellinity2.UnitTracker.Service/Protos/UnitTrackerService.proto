@@ -1,7 +1,5 @@
 syntax = "proto3";
-
 import "google/protobuf/empty.proto";
-
 option csharp_namespace = "BlazorGrpc2";
 
 package UnitTrackerService;
@@ -11,6 +9,6 @@ service UnitTrackerService{
 }
 
 message CheckInCodeReply {
- string checkInCode = 1;
+string checkInCode = 1;
 }
 

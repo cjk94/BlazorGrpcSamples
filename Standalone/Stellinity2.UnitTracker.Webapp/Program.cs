@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Blazor.Hosting;
 
-namespace UnitTracker.Webapp
+namespace Stellinity2.UnitTracker.Webapp
 {
     public class Program
     {

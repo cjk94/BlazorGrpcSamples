@@ -26,8 +26,8 @@
 
   <ItemGroup>
     <!-- Share .proto file with backend server to ensure consistency. Alternatively you could copy it into this project. -->
-    <Protobuf Include="..\UnitTracker.Service\Protos\weather.proto" />
-    <Protobuf Include="..\UnitTracker.Service\Protos\UnitTrackerService.proto" />
+    <Protobuf Include="..\Stellnity2.UnitTracker.Service\Protos\weather.proto" />
+    <Protobuf Include="..\Stellinty2.UnitTracker.Service\Protos\UnitTrackerService.proto" />
   </ItemGroup>
 
 </Project>
